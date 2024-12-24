@@ -63,7 +63,7 @@ def vector_embedding():
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
         final_documents = text_splitter.split_documents(docs[:20])  # First 20 documents
 
-        if not final_documents or len(final_documents) == 0:
+        if not final_documents or final_documents == 0:
             st.error("❌ Failed to split documents. Check the content and formatting of your PDFs.")
             return
 
