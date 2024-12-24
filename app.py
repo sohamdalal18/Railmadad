@@ -58,12 +58,6 @@ def vector_embedding():
         embeddings = SentenceTransformerEmbeddings()
         loader = PyPDFDirectoryLoader("D:/Railmadad/Railmadad/data")  # Correct PDF directory path
         docs = loader.load()
-
-        if not docs or len(docs) == 0:
-            st.error("❌ No documents were loaded. Please ensure the directory contains valid PDF files.")
-            return
-
-        # Debug the number of documents loaded
         st.write(f"📄 Loaded documents successfully.")
 
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
