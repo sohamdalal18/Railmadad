@@ -56,7 +56,7 @@ Questions: {input}
 def vector_embedding():
     try:
         embeddings = SentenceTransformerEmbeddings()
-        loader = PyPDFDirectoryLoader("D:/Railmadad/Railmadad/data")  # Correct PDF directory path
+        loader = PyPDFDirectoryLoader("D:/Railmadad/Railmadad/data")  
         docs = loader.load()
         st.write(f"📄 Loaded documents successfully.")
 
